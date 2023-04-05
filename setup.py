@@ -7,7 +7,7 @@ from setuptools import find_packages, setup
 import os
 
 install_requires = []
-tests_requires = ["pytest", "flake8"]
+tests_requires = ["pytest", "flake8", "pyyaml"]
 
 with open("README.md", "r") as fh:
     long_description = fh.read()

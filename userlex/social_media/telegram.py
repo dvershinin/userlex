@@ -3,12 +3,12 @@ import re
 from userlex.social_media import SocialMedia
 
 
-class Instagram(SocialMedia):
-    PLATFORM_NAME = "instagram"
+class Telegram(SocialMedia):
+    PLATFORM_NAME = "telegram"
 
     USERNAME_REGEXES = [
-        r'insta(?:gram)?:?\s+@?(?P<username>\S+)\b',
-        r'\big\s*:\s+@?(?P<username>\w+)\b'
+        r"(?<!insta)(?<!gram)(?:^|\s)@(?P<username>\S+)\b",
+        r'telegram:?\s+@(?P<username>\S+)\b'
     ]
 
     def __init__(self, username):
@@ -16,7 +16,7 @@ class Instagram(SocialMedia):
 
     @property
     def url(self):
-        return f"https://www.instagram.com/{self.username}/"
+        return f"https://t.me/{self.username}"
 
     @staticmethod
     def from_username(username):
