@@ -1,0 +1,21 @@
+name: Deploy docs
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build
+
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout master
+        uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.6'
+      - run: pip install -r docs/requirements.txt
+      - run: mkdocs gh-deploy --force --clean --verbose
