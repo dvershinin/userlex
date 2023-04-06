@@ -8,6 +8,7 @@ class Facebook(SocialMedia):
 
     USERNAME_REGEXES = [
         r'\b(fb|facebook)\s?:\s?(?P<username>\w+)',
+        r"https://www\.facebook\.com/profile\.php\?id=(?P<username>\d+)"
     ]
 
     def __init__(self, username):
