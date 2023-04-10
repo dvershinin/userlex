@@ -2,7 +2,6 @@
 """
 userlex
 """
-
 from setuptools import find_packages, setup
 import os
 
@@ -34,6 +33,7 @@ setup(
     extras_require={
         "tests": install_requires + tests_requires,
     },
+    entry_points={"console_scripts": ["userlex = userlex.cli:main"]},
     tests_require=tests_requires,
     include_package_data=True,
     classifiers=[
