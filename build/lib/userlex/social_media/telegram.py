@@ -24,4 +24,4 @@ class Telegram(SocialMedia):
 
     @staticmethod
     def matches_username(username):
-        return bool(Instagram.USERNAME_REGEXES.fullmatch(username))
+        return bool(Telegram.USERNAME_REGEXES.fullmatch(username))
