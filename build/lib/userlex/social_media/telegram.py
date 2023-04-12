@@ -20,7 +20,7 @@ class Telegram(SocialMedia):
 
     @staticmethod
     def from_username(username):
-        return Instagram(username)
+        return Telegram(username)
 
     @staticmethod
     def matches_username(username):
