@@ -20,8 +20,8 @@ class Facebook(SocialMedia):
 
     @staticmethod
     def from_username(username):
-        return Instagram(username)
+        return Facebook(username)
 
     @staticmethod
     def matches_username(username):
-        return bool(Instagram.USERNAME_REGEXES.fullmatch(username))
+        return bool(Facebook.USERNAME_REGEXES.fullmatch(username))
